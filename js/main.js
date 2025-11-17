@@ -7,8 +7,12 @@ do {
   console.log("2. Retirar saldo");
   console.log("3. Mostrar saldo");
   console.log("4. Salir");
-
   opc = parseInt(prompt("Seleccione una de las opciones mostrada"));
+
+  if (isNaN(opc)) {
+    alert("Error, Introduce solo número... Vuelve a intentarlo");
+    continue;
+  }
 
   switch (opc) {
     case 1:
@@ -42,6 +46,6 @@ do {
       break;
 
     default:
-      alert("La opcion es invalida, ingrese una opcion valida");
+      alert("La opción es invalida, ingrese una de las opciones que se le muestra");
   }
 } while (opc != 4);
